@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module('TMS', [
+var app = angular.module('TanAgent', [
     'ionic',
     'ionicLazyLoad',
     'ionic-datepicker',
@@ -10,10 +10,10 @@ var app = angular.module('TMS', [
     'ionMdInput',
     'ngMessages',
     'ngCordova',
-    'TMS.config',
-    'TMS.directives',
-    'TMS.services',
-    'TMS.factories',
+    'TanAgent.config',
+    'TanAgent.directives',
+    'TanAgent.services',
+    'TanAgent.factories',
     'ui.select'
 
 ]);
@@ -193,11 +193,14 @@ app.config(['ENV', '$stateProvider', '$urlRouterProvider', '$ionicConfigProvider
                     }
                 }
             })
-            .state('agentjobListing', {
-                url: '/agent/agentjoblisting',
-                cache: 'false',
-                templateUrl: 'view/agent/agentjoblisting.html',
-                controller: 'agentCtrl'
+            .state('index.agentjobListing', {
+                url: '/agentjobListing',
+                views: {
+                    'menuContent': {
+                        templateUrl: "view/agent/agentjoblisting.html",
+                        controller: 'agentCtrl'
+                    }
+                }
             })
             .state('agentDetail', {
                 url: '/agent/agentjobdetail/:JobNo',

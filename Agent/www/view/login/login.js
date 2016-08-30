@@ -7,8 +7,8 @@ app.controller('LoginCtrl', ['ENV', '$scope', '$http', '$state', '$stateParams',
             strAgentID: '',
             strPassWord: '',
             strRole: '',
-            CurRole: '1',
-            NewRole: '1'
+            CurRole: '2',
+            NewRole: '2'
         };
 
         $scope.roles = [{
@@ -79,7 +79,7 @@ app.controller('LoginCtrl', ['ENV', '$scope', '$http', '$state', '$stateParams',
                                 DriverCode: $scope.logininfo.strdriverID,
                             };
                             SqlService.Insert('Todr1_Rcbp1', objTodr1_Rcbp1).then(function (res) {});
-                            $state.go('index.main', {}, {
+                            $state.go('index.agentjobListing', {}, {
                                 reload: true
                             });
                             $rootScope.$broadcast('login');
@@ -127,7 +127,7 @@ app.controller('LoginCtrl', ['ENV', '$scope', '$http', '$state', '$stateParams',
                                 PassWord: $scope.logininfo.strPassWord
                             };
                             SqlService.Insert('Todr1_Rcbp1', objTodr1_Rcbp1).then(function (res) {});
-                            $state.go('index.main', {}, {
+                            $state.go('index.agentjobListing', {}, {
                                 reload: true
                             });
                             $rootScope.$broadcast('login');
@@ -138,11 +138,10 @@ app.controller('LoginCtrl', ['ENV', '$scope', '$http', '$state', '$stateParams',
                 }
             }
         };
-
         if (window.cordova) {
-            $scope.logininfo.strRole = 'Driver';
+            $scope.logininfo.strRole = 'Agent';
         } else {
-            $scope.logininfo.strRole = 'Driver';
+            $scope.logininfo.strRole = 'Agent';
         }
 
         $('#iDriverID').on('keydown', function (e) {
@@ -159,7 +158,7 @@ app.controller('LoginCtrl', ['ENV', '$scope', '$http', '$state', '$stateParams',
                             $rootScope.$broadcast('login');
                             sessionStorage.clear();
                             sessionStorage.setItem('sessionDriverCode', objTodr1_Rcbp1.DriverCode);
-                            $state.go('index.main', {}, {
+                            $state.go('index.agentjobListing', {}, {
                                 reload: true
                             });
                         } else {
@@ -168,7 +167,7 @@ app.controller('LoginCtrl', ['ENV', '$scope', '$http', '$state', '$stateParams',
                             sessionStorage.clear();
                             sessionStorage.setItem('sessionAgentID', objTodr1_Rcbp1.BusinessPartyCode);
                             sessionStorage.setItem('sessionPassWord', objTodr1_Rcbp1.PassWord);
-                            $state.go('index.main', {}, {
+                            $state.go('index.agentjobListing', {}, {
                                 reload: true
                             });
                         }

@@ -1,12 +1,12 @@
 'use strict';
-var appConfig = angular.module('TMS.config', []);
+var appConfig = angular.module('TanAgent.config', []);
 appConfig.constant('ENV', {
-    website: 'www.sysfreight.net/app/tms/tan',
+    website: 'www.sysfreight.net/app/tms/tanagent',
       api: 'www.sysfreight.net/apis/tms/tan',
     // api: 'http://localhost:62787/',
       // api:  'localhost:2442',
     reset: {
-        'website': 'www.sysfreight.net/app/tms/tan',
+        'website': 'www.sysfreight.net/app/tms/tanagent',
         'api': 'www.sysfreight.net/apis/tms/tan',
         'port': '8081'
     },
@@ -28,9 +28,9 @@ appConfig.constant('ENV', {
     fromWeb: true,
     wifi: true,
     appId: '9CBA0A78-7D1D-49D3-BA71-C72E93F9E48F',
-    apkName: 'TAN-TMS',
+    apkName: 'TAN-Agent',
     updateFile: 'update.json',
-    rootPath: 'TANTMS',
+    rootPath: 'TanAgent',
     configFile: 'config.txt',
     version: '1.0.1.1',
 });

@@ -1,5 +1,5 @@
 {
-  "name": "TMS",
+  "name": "TanAgent",
   "private": "true",
   "dependencies": {
     "ionic": "driftyco/ionic-bower#master",

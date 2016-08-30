@@ -59,30 +59,18 @@
     </script>
     <script type="text/javascript" src="https://dn-bughd-web.qbox.me/bughd.min.js" crossOrigin="anonymous"></script>
     <script type="text/javascript">
-        if (navigator.onLine) {
-            jQuery.ajax({
-                url: '//freegeoip.net/json/',
-                type: 'POST',
-                dataType: 'jsonp',
-                success: function(location) {
-                    if (location.country_code === 'CN') {} else {
-                        document.write('<scr' + 'ipt  src="http://maps.google.com/maps/api/js?key=AIzaSyAGntBqvv-HLVxBC0MQc8ugh1pc4wWz2AQ"></scr' + 'ipt>');
-                    }
-                }
-            });
-        }
-        window.bughd = window.bughd || function() {};
+                window.bughd = window.bughd || function() {};
         bughd("create", {
             key: "bc502e92c968dcffad41bfba3fbb99ce"
         });
         bughd("website", {
-            name: "TMS-JollyB"
+            name: "TanAgent"
         });
     </script>
     <!-- endbuild -->
 </head>
 
-<body ng-app="TMS" ng-cloak>
+<body ng-app="TanAgent" ng-cloak>
     <ion-nav-view></ion-nav-view>
 </body>
 

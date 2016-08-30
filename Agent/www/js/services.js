@@ -1,8 +1,8 @@
 'use strict';
-var appService = angular.module('TMS.services', [
+var appService = angular.module('TanAgent.services', [
     'ionic',
     'ngCordova',
-    'TMS.config'
+    'TanAgent.config'
 ]);
 
 appService.service('ApiService', [

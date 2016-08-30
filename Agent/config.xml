@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.sysfreight.JollyB" version="1.0.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>TMS</name>
+<widget id="com.sysfreight.TanAgent" version="1.0.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>TanAgent</name>
   <description>
-        A Delivery App for JollyB.
+        A Delivery App for Tan Agent.
     </description>
-  <author email="vivlong@163.com" href="http://vivlong.github.com/">
+  <author email="wu_decheng@163.com" href="http://deoseal.github.com/">
       James Liao
     </author>
   <content src="index.html"/>

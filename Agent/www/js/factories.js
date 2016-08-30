@@ -1,5 +1,5 @@
-var appFactory = angular.module('TMS.factories', [
-    'TMS.services'
+var appFactory = angular.module('TanAgent.factories', [
+    'TanAgent.services'
 ]);
 
 appFactory.factory('ACCEPTJOB_ORM', function () {
